@@ -1,0 +1,31 @@
+.mainPage{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.first{
+    /* background-color: blue; */
+    margin: auto;
+    /* background-color: aqua;  */
+}
+.second img{
+    /* transform: translateX(100px); */
+    height: 100%;
+    transform: translateY(100px);
+    /* transform: translateX(50px); */
+}
+@media  (max-width: 800px) {
+    .second img{
+        display: none;
+    }
+    .mainPage{
+        grid-template-columns: 100%;
+    }
+    .first{
+        margin: auto;
+        transform: translateY(40%);
+    }
+}

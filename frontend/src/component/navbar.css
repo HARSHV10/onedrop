@@ -1,0 +1,32 @@
+.navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+    margin: 0px;
+    width: 100%;
+}
+
+.Navbutton{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Navbutton a{
+    color: gray;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.active{
+    color:black;
+    background-color: rgba(128, 128, 128, 0.185);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.inactive{
+    color:gray;
+}
