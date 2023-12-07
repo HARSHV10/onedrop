@@ -16,18 +16,22 @@
     font-size: 6rem;
     width: 100%;
     text-align:center;
-    padding-left: 20px;
+    /* padding-left: 20px; */
+    filter: drop-shadow(0 0 0.75rem blue);
 }
 
 .Navbutton{
-    padding: 20px;
-    border-radius: 10px;
-    /* width: 50%; */
+    box-sizing: border-box;
+    /* padding: 20px; */
+    /* width: 40%; */
 }
 
 .navbar a{
+    /* border: solid white;
+    border-radius: 10px; */
     /* background-color: white; */
     width: 50%;
+    border-width: 1px;
     /* background-color: blue; */
     color: white;
     font-size: 150%;
@@ -35,8 +39,8 @@
 }
 
 .active{
-    color:black;
-    background-color: rgb(128, 128, 128);
+    color:white;
+    background-color: rgba(0, 0, 255, 0.283);
     padding: 15px;
     border-radius: 10px;
     border: solid;
@@ -45,7 +49,7 @@
 }
 
 .inactive{
-    color:gray;
+    color:rgb(128, 128, 128);
 }
 
 

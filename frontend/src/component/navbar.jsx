@@ -1,6 +1,6 @@
+import './navbar.css'
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css'
 import { useLocation } from 'react-router-dom';
 import { ActiveRoute } from './script_nav';
 

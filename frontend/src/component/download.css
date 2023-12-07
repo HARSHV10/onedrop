@@ -1,38 +1,38 @@
 .download{
-    /* margin: auto; */
-    /* height: 100%; */
-    /* background-color: aqua; */
-    display: flex;
-}
-
-.first{
-    margin: auto;
-    /* width: 100%; */
-}
-.first-inner{
-    margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    border: solid;
+    border-width: 1px;
+    border-style: dashed;
+    padding: 40px;
+    /* background-color: blue; */
+    animation: glow 4s infinite alternate-reverse;
 }
 
-.codeFeild{
-    margin :auto
-}
-
-.codeFeild input{
-    width: 450px;
-    border-radius: 10px;
+.download input{
     text-align: center;
-    font-size:70px ;
-    margin-bottom: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: rgba(240, 248, 255, 0.955);
+}
+
+.downloadButton{
+    margin-top: 30px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 30px;
+    width: 50%;
+    color: white;
+    background-color: blue;
+    border: solid;
     border-width: 1px;
 }
-.downloadButton{
-    margin: auto;
-    border-radius: 10px;
-    /* margin:10px; */
-    width:100%;
-    height: 50px;
-    border-width:1px;
-}
-
