@@ -22,15 +22,20 @@ export default function Navbar(){
         },[pathname])
     return(
         <div className='navbar'>
-        <div className='Navbutton'>
-        <Link to='/'><span className='uploadnav'>Upload</span></Link>
+        <div className="Logo">
+        OneDrop
         </div>
-        <div className='Navbutton'>
+        <Link to='/'>
+        <div className='Navbutton uploadnav'>
+        <span >Upload</span>
+        </div>
+        </Link>
         <Link to='/download' >
+        <div className='Navbutton downloadnav'>
         <span className='downloadnav'>Download</span>
         
-        </Link>
         </div>
+        </Link>
 
         </div>
     )

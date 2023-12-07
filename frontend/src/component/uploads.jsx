@@ -45,18 +45,25 @@ export default function Uploads() {
 
     // console.log(response.blobl)
   }
+  else{
+    document.querySelector('.fileName').textContent="plz select a file"
+  }
   };
 
   return (
     <div className='uploads'>
     {value?<Dialog value={value}/>:""}
     <div className='inputfile'>
+    
+    
     <label className='inputlabel' for="inputFile">
     <div className='uploadAnimation'>
     <img className='folderAnimation' src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDJhZmYiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFycm93LXVwLWZyb20tbGluZSI+PHBhdGggZD0ibTE4IDktNi02LTYgNiIvPjxwYXRoIGQ9Ik0xMiAzdjE0Ii8+PHBhdGggZD0iTTUgMjFoMTQiLz48L3N2Zz4="></img>
     </div>
     <input id="inputFile" type="file" onChange={handleFileChange} />
     </label>
+
+
     <p className='fileName'>{file?file.name:""}</p>
     <button className='uploadbtn' onClick={handleUpload}>Upload</button>
     </div>

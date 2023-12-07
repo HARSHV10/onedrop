@@ -15,7 +15,6 @@ export default function Main(){
         {pathname=='/'? <Uploads/>:<Download/>}
         </div>
         <div className='second'>
-        <img src={mascot}></img>
         </div>
 
         </div>
