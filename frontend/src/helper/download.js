@@ -5,7 +5,7 @@ export const downloadModule=async (code)=>{
   console.log(code)
   let status=true;
     let fileType;
-    const data =await fetch("http://localhost:3000/download",{
+    const data =await fetch("https://onedrop-ez7c.onrender.com/download",{
   method: 'POST',
   headers: {
     'Content-Type': 'application/json', // Specify the content type if sending JSON data

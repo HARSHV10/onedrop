@@ -5,10 +5,14 @@ const cors = require("cors")
 const fs =require('fs');
 const app = express()
 const mongoose = require("mongoose");
+const dotenv=require("dotenv")
 app.use(express.json());
 app.use(cors());
 
 
+
+dotenv.config();
+// console.log(process.env.DB_URL)
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, 'uploads/'); // Set the destination folder for uploaded files
@@ -20,7 +24,11 @@ const storage = multer.diskStorage({
   
 const upload = multer({ storage: storage });
 
-mongoose.connect("mongodb://127.0.0.1:27017/fileStrorer").then((d)=>{
+mongoose.connect(process.env.DB_URL,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  writeConcern: { w: 'majority' },
+}).then((d)=>{
   // console.log(d);
 }).catch((e)=>{
   console.log(e);
@@ -86,8 +94,8 @@ app.post("/uploadFile",upload.single('file'),async (req,res)=>{
       }, 900000);
       res.status(200).json({"label":label})
     }
-    catch{
-      res.status(500).json({"msg":error})
+    catch(e){
+      res.status(500).json({"msg":err})
     }
     });
 

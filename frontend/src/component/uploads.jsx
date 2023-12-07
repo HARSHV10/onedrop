@@ -25,7 +25,7 @@ export default function Uploads() {
       formData.append('file', file);
       
     try {
-      const response = await axios.post('http://localhost:3000/uploadFile', formData, {
+      const response = await axios.post('https://onedrop-ez7c.onrender.com/uploadFile', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
