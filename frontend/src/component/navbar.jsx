@@ -21,10 +21,11 @@ export default function Navbar(){
        }
         },[pathname])
     return(
-        <div className='navbar'>
+        <div>
         <div className="Logo">
         OneDrop
         </div>
+        <div className='navbar'>
         <Link to='/'>
         <div className='Navbutton uploadnav'>
         <span >Upload</span>
@@ -36,7 +37,8 @@ export default function Navbar(){
         
         </div>
         </Link>
-
+        
+        </div>
         </div>
     )
 }

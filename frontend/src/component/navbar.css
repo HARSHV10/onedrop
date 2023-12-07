@@ -1,12 +1,10 @@
 .navbar{
     box-sizing: border-box;
-    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding-top: 10px;
-    padding: 20px;
     margin: 0px;
     width: 100%;
     text-align: center;
@@ -14,10 +12,11 @@
 
 .Logo{
     /* background-color: red; */
-    font-size: 700%;
-    width: 60%;
-    text-align: left;
-    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 6rem;
+    width: 100%;
+    text-align:center;
+    padding-left: 20px;
 }
 
 .Navbutton{
@@ -30,17 +29,18 @@
     /* background-color: white; */
     width: 50%;
     /* background-color: blue; */
-    color: gray;
+    color: white;
     font-size: 150%;
     text-decoration: none;
 }
 
 .active{
     color:black;
-    background-color: rgba(128, 128, 128, 0.185);
+    background-color: rgb(128, 128, 128);
     padding: 15px;
     border-radius: 10px;
     border: solid;
+    border-color: white;
     border-width: 1px;
 }
 
