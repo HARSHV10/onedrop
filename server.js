@@ -83,7 +83,7 @@ app.post("/uploadFile",upload.single('file'),async (req,res)=>{
           }
           console.log("Delete File successfully.");
         });
-      }, 500000);
+      }, 900000);
       res.status(200).json({"label":label})
     }
     catch{
