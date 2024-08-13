@@ -41,4 +41,10 @@
 
 .fileName{
     text-align: center;
+    font-size: x-large;
+}
+
+.progress{
+    text-align:"center";
+    color:"red";
 }

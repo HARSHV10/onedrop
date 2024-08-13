@@ -6,10 +6,12 @@ import mascot from '../assets/capibara.gif'
 import mascot2 from '../assets/mascot2.gif'
 import { useLocation } from 'react-router-dom';
 import Dialog from './dialog';
-
+// import { CircularProgressWithLabel } from '@mui/material';
 export default function Uploads() {
   const [file, setFile] = useState(null);
   const [value,setValue]=useState();
+  const [loading , setLoading]= useState(false);
+  const [progress, setProgress]= useState(0);
   const location =useLocation();
   // console.log(location)
   const currentPath = location.pathname;
@@ -25,12 +27,20 @@ export default function Uploads() {
       formData.append('file', file);
       
     try {
-      const response = await axios.post('https://onedrop-ez7c.onrender.com/uploadFile', formData, {
+      setLoading(true);
+      axios.post('https://onedrop-ez7c.onrender.com/uploadFile', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+        onUploadProgress:(event)=>{
+          console.log(event.progress*100);
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:1859252402.
+          setProgress(event.progress*100);
+          // console.log(progress.total);
+        }
       }).then(async (d)=>{
         setValue(d.data.label);
+        setLoading(false);
         
         document.querySelector('.fileName').textContent=d.data.label;
       }).catch((e)=>{
@@ -52,6 +62,7 @@ export default function Uploads() {
 
   return (
     <div className='uploads'>
+      {/* <CircularProgressWithLabel value={10} /> */}
     {value?<Dialog value={value}/>:""}
     <div className='inputfile'>
     
@@ -64,8 +75,8 @@ export default function Uploads() {
     </label>
 
 
-    <p className='fileName'>{file?file.name:""}</p>
-    <button className='uploadbtn' onClick={handleUpload}>Upload</button>
+    <p className='fileName '>{file?file.name:""}</p>
+    {loading? <div>{progress.toFixed(2) +"%"}</div>:<button className='uploadbtn' onClick={handleUpload}>Upload</button>}
     </div>
     
 
